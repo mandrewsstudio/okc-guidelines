@@ -1,0 +1,345 @@
+/* ==================== */
+/* Basic Reset */
+/* ==================== */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==================== */
+/* Burger Menu Styles */
+/* ==================== */
+.burger-menu {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    margin-right: auto; /* Push other items to the right */
+}
+
+.burger-menu span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #fff7de;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Active state for burger menu */
+.burger-menu.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.download-btn {
+    border: 1px solid #fff7de;
+    color: #fff7de;
+    padding: 0.25em 0.5em;
+    border-radius: 5px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 60px; /* Below the nav bar */
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: #fc7338;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+        padding: 3rem;
+        font-size: 3em;
+        letter-spacing: -1.5%;
+            display: flex;
+    flex-direction: column;
+    gap: 0.4rem; /* Space between links */
+    align-items: flex-start; /* Align links to the left */
+    overflow-y: auto; /* Allow scrolling if many links */
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .burger-menu {
+        display: block; /* Show burger menu on mobile */
+    }
+
+    /* Hide regular nav links on mobile */
+    nav > .nav-links:not(.active) {
+        display: none;
+    }
+
+    /* Adjust nav layout for mobile */
+    nav {
+        justify-content: space-between;
+        padding: 2rem;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+    .burger-menu {
+        display: hidden !important; /* Force hide on desktop */
+    }
+    
+    .nav-links {
+        display: flex;
+        margin-right: auto;
+    }
+}
+
+
+/* ==================== */
+/* Body and Typography */
+/* ==================== */
+body {
+    font-family:
+        "Moderat",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        sans-serif;
+    line-height: 1.6;
+    color: #000;
+    background-color: #fc7338;
+    overflow-x: hidden;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@font-face {
+    font-family: "Moderat";
+    src:
+        url("font/ModeratWeb-Regular.woff2") format("woff2"),
+        url("font/ModeratWeb-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ==================== */
+/* Heading Styles */
+/* ==================== */
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    letter-spacing: -2.5%;
+}
+
+h1 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    line-height: 100%;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    line-height: 100%;
+}
+
+h3 {
+    margin: 1rem 0;
+    font-size: 2rem;
+    line-height: 115%;
+}
+
+/* ==================== */
+/* Paragraph Styles */
+/* ==================== */
+p {
+    font-size: 1.2rem;
+    line-height: 129%;
+}
+
+.work-item p {
+    padding-top: 9px;
+    padding-right: 5%;
+    padding-bottom: 1rem;
+}
+
+/* ==================== */
+/* Link Styles */
+/* ==================== */
+a {
+    color: #fc7338;
+    text-decoration: none;
+    border-bottom: 1px solid #182622;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+nav a {
+    margin: 0 0.5rem;
+    font-size: 1em;
+    border-bottom: none;
+    color: #182622;
+}
+
+#case a {
+    color: #fc7338;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+/* ==================== */
+/* Layout and Containers */
+/* ==================== */
+.container {
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ==================== */
+/* Navigation */
+/* ==================== */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fc7338;
+    padding: 0.5rem 1rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+}
+
+/* ==================== */
+/* Work Section */
+/* ==================== */
+.colours-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.6vw;
+    margin-top: 1.1rem;
+    margin-bottom: 0;
+}
+
+.dot {
+    height: 21.8vw;
+    width: 21.8vw;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    line-height: 120%;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    margin-top: 1.1rem;
+    margin-bottom: 0;
+}
+
+.work-item {
+    text-align: left;
+    min-height: 30px;
+    margin: 0;
+    padding: 0; 
+}
+
+.work-item img {
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    margin: 0;
+    padding: 0;
+}
+
+.work-item-wide img {
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-top: 0.4rem;
+}
+
+.divider {
+    height: 45px;
+    border-bottom: dotted 0.5px;
+}
+
+/* ==================== */
+/* Case Section */
+/* ==================== */
+#case {
+    background-color: #fff7de;
+    color: #182622 !important;
+    padding-top: 5em;
+}
+
+/* ==================== */
+/* Responsive Design */
+/* ==================== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .colours-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2vw;
+        margin-top: 2vw;
+    }
+
+    .dot {
+        height: 40vw;
+        width: 40vw;
+        margin-top: 2vw;
+    }
+
+    .work-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
