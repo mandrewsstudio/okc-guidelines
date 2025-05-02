@@ -170,7 +170,7 @@ h2 {
 }
 
 h3 {
-    margin: 1rem 0;
+    margin: 0.3rem 0 1rem 0;
     font-size: 2rem;
     line-height: 115%;
 }
@@ -184,7 +184,6 @@ p {
 }
 
 .work-item p {
-    padding-top: 9px;
     padding-right: 5%;
     padding-bottom: 1rem;
 }
@@ -268,7 +267,6 @@ nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
-    margin-top: 1.1rem;
     margin-bottom: 0;
 }
 
@@ -276,7 +274,7 @@ nav {
     text-align: left;
     min-height: 30px;
     margin: 0;
-    padding: 0; 
+    padding: 0 0 20px 0; 
 }
 
 .work-item img {
@@ -298,7 +296,8 @@ nav {
 
 .divider {
     height: 45px;
-    border-bottom: dotted 0.5px;
+    border-bottom: solid 0.5px #182622;
+    margin: 0 0 0.5em 0;
 }
 
 /* ==================== */
