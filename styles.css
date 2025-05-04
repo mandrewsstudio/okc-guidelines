@@ -419,6 +419,7 @@ nav {
 @media (max-width: 768px) {
     h1 {
         font-size: 5rem;
+        font-weight: 600;
     }
 
     h2 {
