@@ -221,7 +221,8 @@ body {
 /* Moderat Regular */
 @font-face {
     font-family: "Muoto";
-    src: url("fonts/MuotoTrial-Regular.otf") format("opentype");
+    src: url("fonts/205TF-Muoto-Regular.woff2") format("woff"), 
+        url("fonts/205TF-Muoto-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -229,14 +230,16 @@ body {
 
 @font-face {
     font-family: "Muoto";
-    src: url("fonts/MuotoTrial-Medium.otf") format("opentype");
+    src: url("fonts/205TF-Muoto-Medium.woff2") format("woff2"), 
+        url("fonts/205TF-Muoto-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "Muoto";
-    src: url("fonts/MuotoTrial-Bold.otf") format("opentype");
+    src:url("fonts/205TF-Muoto-Bold.woff2") format("woff2"), 
+        url("fonts/205TF-Muoto-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -253,17 +256,17 @@ h3 {
 
 h1 {
         font-weight: 700;
-    font-size: 10vw;
+    font-size: 12.5vw;
     margin: 1vw 0 10rem 0;
     line-height: 85%;
         letter-spacing: -7%;
 }
 
 h2 {
-        font-weight: 500;
+        font-weight: 700;
     font-size: 4rem;
     margin-bottom: 2rem;
-    line-height: 100%;
+    line-height: 85%;
 }
 
 h3 {
