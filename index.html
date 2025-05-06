@@ -15,6 +15,7 @@
             integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg=="
             crossorigin="anonymous"
             referrerpolicy="no-referrer"></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     </head>
     <body>
         <!-- Fixed Navigation -->
@@ -234,21 +235,13 @@
                         </p>
                     </div>
                     <div class="work-item">
-                        <script>var animation = bodymovin.loadAnimation({
-
-container: document.getElementById('animation-container'),
-
-path: 'images/OKC-Endframe.json',
-
-renderer: 'svg',
-
-loop: true,
-
-autoplay: true,
-
-name: "Demo Animation",
-
-}); </script>
+                        <lottie-player
+                            src="images/OKC-Endframe.json"
+                            background="transparent"
+                            speed="1"
+                            style="width: 100%;height:inherit;"
+                            loop                            
+                            autoplay></lottie-player>
                     </div>
                 </div>
 
