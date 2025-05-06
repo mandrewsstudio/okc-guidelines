@@ -55,6 +55,7 @@ video {
 .lightbox-text p {
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
+    line-height: 120%;
 }
 
 .lightbox-close {
@@ -376,9 +377,11 @@ nav {
 
 .work-item {
     text-align: left;
-    min-height: 30px;
-    margin: 0;
+    margin: 5px 0 0 0;
     padding: 0 0 0 0; 
+    min-height: unset; /* Remove fixed height */
+    display: flex;
+    flex-direction: column;
 }
 
 .work-item img {
@@ -395,7 +398,8 @@ nav {
     width: 100%;
     border-radius: 7px;
     object-fit: cover;
-    margin-top: 0.4rem;
+    margin-top: 0.8em;
+
 }
 
 .divider {
